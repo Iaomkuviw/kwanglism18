@@ -8,7 +8,7 @@ import java.util.Scanner;
      }
       
     public void Typeshirt1(){
-        int Shirt ;   
+        int Shirt;   
         
         do{
             System.out.println("\n-------Shirt Menu--------");
@@ -20,7 +20,9 @@ import java.util.Scanner;
             System.out.println("Enter Number>>>  ");
             String B = A.nextLine();
             
-        }while(Shirt!= 1 && Shirt!= 2 && Shirt!= 3 && Shirt!= 4 && Shirt!= 5)
+        }while(Shirt!= 1 && Shirt!= 2 && Shirt!= 3 && Shirt!= 4 && Shirt!= 5);
+                
+    }
           
        public void Color1(){
             Scanner C = new Scanner(System.in);
@@ -29,11 +31,15 @@ import java.util.Scanner;
       }  
      
         public void Size1(){
+            Scanner D = new Scanner(System.in);
             System.out.println("Size: ");  
+            String D1 = D.nextLine();
         }
         
         public void No1(){
+            Scanner E = new Scanner(System.in);
             System.out.println("No: ");
+            String E1 = E.nextLine();
             }  
                 
     
@@ -64,13 +70,16 @@ import java.util.Scanner;
     public void No1() { 
         System.out.println("No: ");
     }
+    
+    
        
     
         
         public void logo(){
-        S}
+        System.out.println("");
+        }
         public void Shopper(){
-        System.out.println("----Shirt-----");
+        System.out.println("----Order-----");
         super.Shopper();
         this.logo();
         System.out.println("Type is " + Type);

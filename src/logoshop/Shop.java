@@ -5,7 +5,7 @@ abstract class Shop {
             
             public void Shopper(){
             System.out.println("LOGO SHOP");
-            System.out.println("Amount of goods = "+goods);
+            System.out.println(" goods = "+goods);
 }
 }
     
