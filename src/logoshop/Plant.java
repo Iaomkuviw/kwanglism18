@@ -1,11 +1,16 @@
 package logoshop;
 import java.util.Scanner;
- class Plant extends Shop implements Color,Size,No,TypePlant {
+abstract class Plant extends Shop implements Color,Size,TypePlant {
      Scanner A2 = new Scanner(System.in);
      public String Type;
      public Plant(String Type){
              this.Type = Type;
      }
+
+    Plant() {
+        
+    }
+     @Override
     public void TypePlant1(){
         int P ;          
         do{
@@ -15,29 +20,38 @@ import java.util.Scanner;
             System.out.println("Press 3 > Short Plant :"+" 350 THB");
             System.out.println("Press 4 > Long Plant :"+" 450 THB");
             Scanner G = new Scanner(System.in);
-            System.out.println("Enter Number>>>  ");
+            System.out.print("Enter Number>>>  ");
              P = G.nextInt();
         }while(P!= 1 && P!= 2 && P!= 3 && P!= 4);      
                
-     
+    }
+    
+     @Override
     public void Color1(){
             Scanner I = new Scanner(System.in);
-            System.out.println("Color:  ");   
+            System.out.print("Color:  ");   
             String I1 = I.nextLine();
       }  
      
+     
+     @Override
         public void Size1(){
             Scanner J = new Scanner(System.in);
-            System.out.println("Size: ");  
+            System.out.print("Size: ");  
             String J1 = J.nextLine();
+            this.count();
         }
-        
-        public void No1(){
-            Scanner K = new Scanner(System.in);
-            System.out.println("No: ");
-            String K1 = K.nextLine();
-            }  
-                    
+        public void count(){
+            
+            Scanner cc = new Scanner(System.in);
+            System.out.print("How many do you want :");
+            int count = cc.nextInt();
+           for(int i =1 ; i < count ; i++){
+               System.out.println("Done No."+i);
+               
+           }
+        }
+       
         
     public void logo(){
         System.out.println("");}
@@ -49,7 +63,7 @@ import java.util.Scanner;
         TypePlant1();
         Color1();
         Size1();
-        No1();
+      
     }
 
     

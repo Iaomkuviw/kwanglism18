@@ -1,11 +1,15 @@
 package logoshop;
 import java.util.Scanner;
-    class Shirt extends Shop implements Color,Size,No,Typeshirt{
+    class Shirt extends Shop implements Color,Size,Typeshirt{
      Scanner A = new Scanner(System.in);
      public String Type;
-     public Shirt(String Type){
+     public void Shirt(String Type){
              this.Type = Type;
      }
+
+    Shirt() {
+        
+    }
 
     
       
@@ -21,37 +25,42 @@ import java.util.Scanner;
             System.out.println("Press 4 > Jacket :"+" 550 THB");
             System.out.println("Press 5 > Dress :"+" 750 THB");
             Scanner A1 = new Scanner(System.in);
-            System.out.println("Enter Number>>>  ");
+            System.out.print("Enter Number>>>  ");
             B = A1.nextInt();
             
         }while(B!= 1 && B!= 2 && B!= 3 && B!= 4 && B!= 5);
+        
                 
     }
           
      @Override
        public void Color1(){
             Scanner C = new Scanner(System.in);
-            System.out.println("Color:  ");   
+            System.out.print("Color:  ");   
             String C1 = C.nextLine();
       }  
      
      @Override
         public void Size1(){
             Scanner D = new Scanner(System.in);
-            System.out.println("Size: ");  
+            System.out.print("Size: ");  
             String D1 = D.nextLine();
+            this.count();
         }
         
-     @Override
-        public void No1(){
-            Scanner E = new Scanner(System.in);
-            System.out.println("No: ");
-            String E1 = E.nextLine();
-            }  
+    
                 
-    
-    
-    
+        public void count(){
+            
+            Scanner cc = new Scanner(System.in);
+            System.out.print("How many do you want :");
+            int count = cc.nextInt();
+           for(int i =count ; 0 <i ; i++){
+               System.out.println("Done No."+i  );
+               
+           }
+        }
+   
     
        
     
@@ -67,9 +76,11 @@ import java.util.Scanner;
         Typeshirt1();
         Color1();
         Size1();
-        No1();
+       
 }
-}
+      
+}      
+
 
 
 

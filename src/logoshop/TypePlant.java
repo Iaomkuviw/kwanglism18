@@ -1,5 +1,5 @@
 package logoshop;
  interface TypePlant {
-     public void TypePlant();
+     public void TypePlant1();
     
 }

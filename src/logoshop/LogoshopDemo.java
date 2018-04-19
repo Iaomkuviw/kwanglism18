@@ -6,6 +6,7 @@ public class LogoshopDemo {
         String a = "abcd";
         String b = "123456";
         String in,in1;
+        double commission =0.5;
        
         do{
         System.out.println("---------------------------------");
@@ -16,26 +17,54 @@ public class LogoshopDemo {
         in = input.nextLine(); 
         System.out.print("Password : ");
         in1 = input.nextLine();        
-        }while(!((in.equals(a)||in1.equals(b))));
+        }while(!((in.equals(a)&&in1.equals(b))));
        
         int AB;
         do{
             System.out.println("-----------------------------");
             Scanner AC = new Scanner(System.in);
-            System.out.println("Press A for Seller / Press B for Check stock? : ");
+            System.out.println("Press 1 for Seller / Press 2 for Check stock? : ");
             AB = AC.nextInt();         
-        }while(AB!= 'A' && AB!= 'B');
+        }while(AB!= 1 && AB!= 2);
         
-        if(AB=='A'){
-            super.Shopper();
-        }
+        int n;
+        if(AB==1){
+          // do{
+           // System.out.println("-----------------------------");
+          //  Scanner TP = new Scanner(System.in);
+           // System.out.println("Press 1 for Thirts / Press 2 for Plants : ");
+           // n = TP.nextInt();         
+       // }while(n!= 1 && n!= 2);
+              
+              // if(n == 1){
+                    Shirt sr = new Shirt();
+                    sr.Typeshirt1();
+                    sr.Color1();
+                    sr.Size1();
+                    
+                    
+               // }else{
+                   Plant pl = new Plant("eiei") {};
+                   pl.TypePlant1();
+                   pl.Color1();
+                   pl.Size1();
+                 
+                        
+               
+                
+       
+                
+               
+            
+           // Bill B = new Bill();
+               // B.Bill;
+      
+        }else{
+      
         
-        Shirt Sh = new Shirt("");
-        Sh.Typeshirt1();
-        Sh.Color1();
-        Sh.Size1();
-        Sh.No1();
-    
+        
 }
+    }
 }
+
 
