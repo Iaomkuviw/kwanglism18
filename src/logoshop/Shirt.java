@@ -1,14 +1,17 @@
 package logoshop;
 import java.util.Scanner;
-    class Seller extends Shop implements Color,Size,No,Typeshirt,TypePlant{
+    class Shirt extends Shop implements Color,Size,No,Typeshirt{
      Scanner A = new Scanner(System.in);
      public String Type;
-     public Seller(String Type){
+     public Shirt(String Type){
              this.Type = Type;
      }
+
+    
       
+    @Override
     public void Typeshirt1(){
-        int Shirt;   
+        int B;   
         
         do{
             System.out.println("\n-------Shirt Menu--------");
@@ -17,25 +20,29 @@ import java.util.Scanner;
             System.out.println("Press 3 > Shirt :"+" 450 THB");
             System.out.println("Press 4 > Jacket :"+" 550 THB");
             System.out.println("Press 5 > Dress :"+" 750 THB");
+            Scanner A1 = new Scanner(System.in);
             System.out.println("Enter Number>>>  ");
-            String B = A.nextLine();
+            B = A1.nextInt();
             
-        }while(Shirt!= 1 && Shirt!= 2 && Shirt!= 3 && Shirt!= 4 && Shirt!= 5);
+        }while(B!= 1 && B!= 2 && B!= 3 && B!= 4 && B!= 5);
                 
     }
           
+     @Override
        public void Color1(){
             Scanner C = new Scanner(System.in);
             System.out.println("Color:  ");   
             String C1 = C.nextLine();
       }  
      
+     @Override
         public void Size1(){
             Scanner D = new Scanner(System.in);
             System.out.println("Size: ");  
             String D1 = D.nextLine();
         }
         
+     @Override
         public void No1(){
             Scanner E = new Scanner(System.in);
             System.out.println("No: ");
@@ -44,32 +51,6 @@ import java.util.Scanner;
                 
     
     
-    public void TypePlant1(){
-        int Plant ;      
-       
-        do{
-            System.out.println("\n-------Plant Menu--------");
-            System.out.println("Press 1 > Jeans :"+" 1500 THB");
-            System.out.println("Press 2 > Chino :"+" 750 THB");
-            System.out.println("Press 3 > Short Plant :"+" 350 THB");
-            System.out.println("Press 4 > Long Plant :"+" 450 THB");
-            String C1 = A.nextLine();
-            System.out.println("Enter Number>>>  ");
-            
-        }while(Plant!= 1 && Plant!= 2 && Plant!= 3 && Plant!= 4)            
-    }
-
-  
-    
-    public void Color1() {
-      System.out.println("Color: ");
-    } 
-    public void Size1() {
-        System.out.println("Size: ");
-    }
-    public void No1() { 
-        System.out.println("No: ");
-    }
     
     
        
@@ -78,7 +59,7 @@ import java.util.Scanner;
         public void logo(){
         System.out.println("");
         }
-        public void Shopper(){
+        public void  print(){
         System.out.println("----Order-----");
         super.Shopper();
         this.logo();
