@@ -2,45 +2,33 @@ package logoshop;
 
 import java.util.Scanner;
 
-public class Bill extends Shop{
-    //private int Total;
-   // public Bill(int Total){
-    //    this.Total=Total;
-    //}
-    //public int getTotal(){
-    //    return Total;
-   // }
+abstract class Bill extends Shop {
+   public abstract void Fok();
     public void member(){
         String m1 = "159357";
         String m2 = "741258";
         String m3 = "789654";
         char mimi;
-        double discount =0.0;
         String id;
         
      do{
         Scanner m = new Scanner(System.in);
         System.out.println("-------------------------------------- ");
-       System.out.print("Do you have a membership code? (Y /N ): ");
+        System.out.print("คุณเป็นสมาชิกหรือไม่ (Y /N ): ");
         String mmm = m.nextLine();
         mimi = mmm.charAt(0);
-    }while(!(mimi !='Y'||mimi !='y' ));
+    }while(!(mimi !='Y'||mimi !='y'));
        if (mimi == 'Y'|| mimi == 'y'){
     do{
     
     Scanner idee = new Scanner(System.in);
      System.out.print("Enter ID : ");
-          id = idee.nextLine();
+        id = idee.nextLine();
     }while(!(id.equals(m1)||id.equals(m2)||id.equals(m3)));
          discount = 0.1 ;
        }else{ discount = 0.0;}
 }
-  if(Total>=2000){
-       System.out.print(" ซื้อครบ 2000 ลด 10%"); 
-       Total = Total-(Total*(0.1))
-    }else{
-       System.out.print(" ซื้อครบ 5000 ลด 20% ");
-}
+ 
     
 
      
@@ -54,40 +42,50 @@ public class Bill extends Shop{
     System.out.println("***Tel.090-1011101***");
        
   
-    Total = Total+Total_Shirt+Total_Plant;
-     
-                        
-     System.out.print("Total is "+Total );
+   
       //ลูกค้าประจำลด 10%
-      //ซื้อเกิน2000 ลด 5%
-      //ซื้อเกิน 3000 ลด 7 %
+      //ซื้อเกิน2000 ลด 15%
+      //ซื้อเกิน 5000 ลด 20%
+     // Shirt Sh = new Shirt();
+     // Sh.Total_Shirt();
       
-      
-      
+      //Plant Pa = new Plant();
+     // Pa.Total_Plant();             
+        System.out.println("shirt "+Shop.Total_Shirt); 
+        System.out.println("plant "+Shop.Total_Plant);
+        Shop.Total=Shop.Total_Plant+Shop.Total_Shirt;
+        System.out.print("Total is "+Shop.Total);
+       if (Total>= 2000.0 ){
+           System.out.println(" ซื้อครบ 2,000 บาทขึ้นไป รับส่วนลด 15%!!!! ");
+           Total =  Total-(Total*0.15);
+           System.out.println(" ราคารวม " +Total);
+          // checkYod c=new checkYod();
+          // c.setcalculatecheck(Total);
+                   
+       }else if(Total >=5000.0){
+           System.out.println(" ซื้อครบ 5,000 บาทขึ้นไป รับส่วนลด 20%!!!! ");
+           Total =  Total-(Total*0.2);
+           System.out.println(" ราคารวม " +Total);
+          // checkYod c=new checkYod();
+          // c.setcalculatecheck(Total);
+       }else{
+                 Total = Total;
+             //    checkYod c=new checkYod();
+         //  c.setcalculatecheck(Total);
+                   }
+       this.change(Total);
+       }
+      public void change(Double Total){
       Scanner cash = new Scanner(System.in);
-      System.out.print("Enter รับเงิน :");
-      int ca = cash.nextInt();
-      System.out.print("Total is "+(Total = ca- Total));
-      System.out.print("ทอนเงิน : "+Total);
-
-                            
-        }
-    
-
-    public void logo() {
-       
-    }
-
-    
-    
+      System.out.print("รับเงิน>>>>  : ");
+      ca = cash.nextDouble();
+      System.out.println("ทอนเงิน>>>> "+(Total = ca-Total));
+      System.out.println("\n         ขอบคุณที่ใช้บริการค่ะ         ");
+      System.out.println("----------------------------------");
+}
+}                 
         
-   
-   
-   
-   
-   
-   
-    }
+ 
 
     
    // public void logo() {
