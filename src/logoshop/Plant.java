@@ -1,6 +1,6 @@
 package logoshop;
 import java.util.Scanner;
-abstract class Plant extends Shop implements Color,Size,TypePlant {
+class Plant extends Shop implements Color,Size,TypePlant {
      Scanner A2 = new Scanner(System.in);
      public String Type;
      public Plant(String Type){
@@ -10,9 +10,9 @@ abstract class Plant extends Shop implements Color,Size,TypePlant {
     Plant() {
         
     }
-     @Override
+    int P ;
     public void TypePlant1(){
-        int P ;          
+                 
         do{
             System.out.println("\n-------Plant Menu--------");
             System.out.println("Press 1 > Jeans :"+" 1500 THB");
@@ -23,53 +23,57 @@ abstract class Plant extends Shop implements Color,Size,TypePlant {
             System.out.print("Enter Number>>>  ");
              P = G.nextInt();
         }while(P!= 1 && P!= 2 && P!= 3 && P!= 4);      
-               
+         this.Color1();
     }
     
-     @Override
-    public void Color1(){
-            Scanner I = new Scanner(System.in);
+     
+    
+       public void Color1(){
+            Scanner C = new Scanner(System.in);
             System.out.print("Color:  ");   
-            String I1 = I.nextLine();
+            String C1 = C.nextLine();
+            this.Size1();
       }  
      
-     
-     @Override
+   
         public void Size1(){
-            Scanner J = new Scanner(System.in);
+            Scanner D = new Scanner(System.in);
             System.out.print("Size: ");  
-            String J1 = J.nextLine();
-            this.count();
+            String D1 = D.nextLine();
+            
         }
+        
+   
+    //int Total_Plant = 0; int count = 10;            
         public void count(){
             
-            Scanner cc = new Scanner(System.in);
+            Scanner cc1 = new Scanner(System.in);
             System.out.print("How many do you want :");
-            int count = cc.nextInt();
-           for(int i =1 ; i < count ; i++){
-               System.out.println("Done No."+i);
-               
-           }
+            many = cc1.nextInt();
+         //  for(int i =1 ; i<=many ; i++){
+              
+         switch (P){
+            case 1:Total_Plant = 1500*many;
+                System.out.println(" Jeans :"+Total_Plant+" THB "  + many + " Piece");
+                
+                break;
+            case 2:Total_Plant = 750*many;
+                System.out.println(" Chino :"+Total_Plant+" THB "  + many + " Piece");
+                
+                break;
+            case 3: Total_Plant =350*many;
+                System.out.println(" Short Plant :"+Total_Plant+" THB "  + many + " Piece");
+                
+                break;
+            default:Total_Plant = 450*many;
+                System.out.println(" Long Plant :"+Total_Plant+" THB "  + many + " Piece");
+                
+                break;
         }
+
        
-        
-    public void logo(){
-        System.out.println("");}
-        public void Shopper(){
-        System.out.println("----Order-----");
-        super.Shopper();
-        this.logo();
-        System.out.println("Type is " + Type);
-        TypePlant1();
-        Color1();
-        Size1();
-      
-    }
 
     
 
- }
-
-
-    
-    
+       
+}}

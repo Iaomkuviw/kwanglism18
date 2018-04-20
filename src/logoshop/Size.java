@@ -1,5 +1,7 @@
 package logoshop;
-interface Size {
+public interface Size {
+
     public void Size1();
     
 }
+

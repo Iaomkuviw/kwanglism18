@@ -13,9 +13,9 @@ import java.util.Scanner;
 
     
       
-    @Override
+     int B;
     public void Typeshirt1(){
-        int B;   
+      
         
         do{
             System.out.println("\n-------Shirt Menu--------");
@@ -29,58 +29,66 @@ import java.util.Scanner;
             B = A1.nextInt();
             
         }while(B!= 1 && B!= 2 && B!= 3 && B!= 4 && B!= 5);
-        
+        this.Color1();
                 
     }
           
-     @Override
+     
        public void Color1(){
             Scanner C = new Scanner(System.in);
-            System.out.print("Color:  ");   
+            System.out.print("Color: ");   
             String C1 = C.nextLine();
+            this.Size1();
       }  
      
-     @Override
+
         public void Size1(){
             Scanner D = new Scanner(System.in);
             System.out.print("Size: ");  
             String D1 = D.nextLine();
-            this.count();
+           
         }
         
-    
-                
+   
+    //int Total_Shirt = 0; int count = 10;            
         public void count(){
             
             Scanner cc = new Scanner(System.in);
             System.out.print("How many do you want :");
-            int count = cc.nextInt();
-           for(int i =count ; 0 <i ; i++){
-               System.out.println("Done No."+i  );
-               
-           }
-        }
+            many = cc.nextInt();
+           
+            //  for(int i =1; i<=many ;i++){
+             
    
-    
-       
-    
-        
-        public void logo(){
-        System.out.println("");
+        switch (B){
+            case 1:Total_Shirt = 250*many;
+                 System.out.println("T-Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+                 
+                 
+                break;
+            case 2:Total_Shirt = 350*many;
+                System.out.println("Polo Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+                
+                break;
+            case 3:Total_Shirt = 450*many;
+                System.out.println("Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+                
+                break;
+            case 4:Total_Shirt = 550*many;
+                System.out.println("Jacket : "+Total_Shirt+" THB "  + many + " Piece");
+                
+                break;
+            default:Total_Shirt = 750*many;
+                    System.out.println("Dress : "+Total_Shirt+" THB "  + many+ " Piece");
+                
+                break;
         }
-        public void  print(){
-        System.out.println("----Order-----");
-        super.Shopper();
-        this.logo();
-        System.out.println("Type is " + Type);
-        Typeshirt1();
-        Color1();
-        Size1();
-       
-}
-      
-}      
 
+              }}
+      
+
+   
+   
 
 
 

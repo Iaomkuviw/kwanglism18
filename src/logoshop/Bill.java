@@ -2,8 +2,14 @@ package logoshop;
 
 import java.util.Scanner;
 
-public class Bill {
-    
+public class Bill extends Shop{
+    //private int Total;
+   // public Bill(int Total){
+    //    this.Total=Total;
+    //}
+    //public int getTotal(){
+    //    return Total;
+   // }
     public void member(){
         String m1 = "159357";
         String m2 = "741258";
@@ -14,6 +20,7 @@ public class Bill {
         
      do{
         Scanner m = new Scanner(System.in);
+        System.out.println("-------------------------------------- ");
        System.out.print("Do you have a membership code? (Y /N ): ");
         String mmm = m.nextLine();
         mimi = mmm.charAt(0);
@@ -28,45 +35,52 @@ public class Bill {
          discount = 0.1 ;
        }else{ discount = 0.0;}
 }
+  if(Total>=2000){
+       System.out.print(" ซื้อครบ 2000 ลด 10%"); 
+       Total = Total-(Total*(0.1))
+    }else{
+       System.out.print(" ซื้อครบ 5000 ลด 20% ");
+}
+    
 
      
      
 
         
-    public void Bill(int B, int P){  
-        int Total = 0;
+    public void Bill2(){
+       
     System.out.println("********Bill********");
-    System.out.println("------LOGO SHOP------");
+    System.out.println("-----LOGO SHOP------");
     System.out.println("***Tel.090-1011101***");
+       
+  
+    Total = Total+Total_Shirt+Total_Plant;
+     
+                        
+     System.out.print("Total is "+Total );
+      //ลูกค้าประจำลด 10%
+      //ซื้อเกิน2000 ลด 5%
+      //ซื้อเกิน 3000 ลด 7 %
+      
+      
+      
+      Scanner cash = new Scanner(System.in);
+      System.out.print("Enter รับเงิน :");
+      int ca = cash.nextInt();
+      System.out.print("Total is "+(Total = ca- Total));
+      System.out.print("ทอนเงิน : "+Total);
+
+                            
+        }
     
-   if(B == 1){
-        System.out.println("T-Shirt : 250 THB");
-                Total = Total+250;
-    }else if(B == 2){
-        System.out.println("Polo Shirt : 350 THB");
-                Total = Total+350;
-    }else if(B == 3){
-        System.out.println("Polo Shirt : 450 THB");
-                Total = Total+450;
-    }else if(B == 4){  System.out.println("Polo Shirt : 550 THB");
-                Total = Total+550;
-   }else { System.out.println("Polo Shirt : 750 THB");
-                Total = Total+750;
+
+    public void logo() {
+       
     }
-   
-   if(P==1){
-       System.out.println("Press 1 > Jeans :"+" 1500 THB");
-                Total = Total+1500;
-    }else if(P== 2){
-        System.out.println("Press 2 > Chino :"+" 750 THB");
-                Total = Total+750;
-    }else if(P== 3){
-        System.out.println("Press 3 > Short Plant :"+" 350 THB");
-                Total = Total+350;
-    }else {  
-        System.out.println("Press 4 > Long Plant :"+" 450 THB");
-                Total = Total+450;
-   }
+
+    
+    
+        
    
    
    
@@ -74,11 +88,17 @@ public class Bill {
    
    
     }
+
+    
+   // public void logo() {
+        
+    
+
+   
 
     
 
        
-   }
    
    
    
@@ -103,7 +123,6 @@ public class Bill {
    
    
    
-    }
-}
+    
    
 
