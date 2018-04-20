@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class LogoshopDemo {
 
     //private static Object Total_Shirt;
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
        Scanner input = new Scanner(System.in);
        String a = "abcd";
        String b = "123456";
        String in,in1;
-        double commission =0.5;
+       double commission =0.5;
                 
         System.out.println("---------------------------------");
         System.out.println("          YOUR WELLCOME          ");
@@ -21,7 +21,7 @@ public class LogoshopDemo {
         System.out.print("Password : ");
         in1 = input.nextLine();        
         }while(!((in.equals(a)&&in1.equals(b))));
-       
+       do{
         int AB;
         do{
             System.out.println("-----------------------------");
@@ -32,8 +32,8 @@ public class LogoshopDemo {
         
         int n;
         if(AB==1){
-            int Total_Shirt=0;
-            int Total_Plant=0;
+            //int Total_Shirt=0;
+            //int Total_Plant=0;
           // do{
            // System.out.println("-----------------------------");
           //  Scanner TP = new Scanner(System.in);
@@ -65,6 +65,10 @@ public class LogoshopDemo {
               
            CY.calculatecheck();}
             
-    }}
+    }while();
+
+    }
+}
+}
 
       
