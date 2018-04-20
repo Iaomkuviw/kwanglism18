@@ -8,11 +8,12 @@ public class LogoshopDemo {
        String a = "abcd";
        String b = "123456";
        String in,in1;
-       double commission =0.5;
+       char order;
                 
         System.out.println("---------------------------------");
         System.out.println("          YOUR WELLCOME          ");
         System.out.println("            LOGO SHOP            ");
+        System.out.println("          ***ยินดีต้อนรับ***         ");
         System.out.println("---------------------------------");
        do{
                 
@@ -21,27 +22,21 @@ public class LogoshopDemo {
         System.out.print("Password : ");
         in1 = input.nextLine();        
         }while(!((in.equals(a)&&in1.equals(b))));
-       do{
-        int AB;
+      
+       int AB;
+    do{
+        
+        
         do{
             System.out.println("-----------------------------");
             Scanner AC = new Scanner(System.in);
-            System.out.println("Press 1 for Seller / Press 2 for Check stock? : ");
+            System.out.println("กด 1 เพื่อขายของ / กด 2 เพื่อเช็คยอด  : ");
             AB = AC.nextInt();         
         }while(AB!= 1 && AB!= 2);
         
         int n;
         if(AB==1){
-            //int Total_Shirt=0;
-            //int Total_Plant=0;
-          // do{
-           // System.out.println("-----------------------------");
-          //  Scanner TP = new Scanner(System.in);
-           // System.out.println("Press 1 for Thirts / Press 2 for Plants : ");
-           // n = TP.nextInt();         
-       // }while(n!= 1 && n!= 2);
-             // int Total= 0;
-              // if(n == 1){
+            
                     Shirt sr = new Shirt();
                     sr.Typeshirt1();
                     sr.count();
@@ -53,22 +48,32 @@ public class LogoshopDemo {
                    pl.count();
                    
                    
-                 Bill B = new Bill( );
+                 Donthave B = new Donthave( );
                  B.member();
                  B.Bill2();
                
             
         
       
-        }else{
+        }else {
             checkYod CY = new checkYod();
-              
-           CY.calculatecheck();}
             
-    }while();
+           CY.calculatecheck();}
+        
+        
+        System.out.print("คุณต้องการทำรายการอีกครั้งหรือไม่(Y/N)>>>");
+        Scanner t = new Scanner(System.in);
+        String t1 = t.nextLine();
+        order = t1.toUpperCase().charAt(0);
+    
+         
+    }while(order=='Y'); 
+    //}while(AB!= 1 && AB!= 2);
+    }}
 
-    }
-}
-}
+
+    
+
+
 
       
