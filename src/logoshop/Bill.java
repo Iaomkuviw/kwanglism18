@@ -1,6 +1,7 @@
 package logoshop;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 abstract class Bill extends Shop {
    public abstract void Fok();
@@ -8,8 +9,13 @@ abstract class Bill extends Shop {
         String m1 = "159357";
         String m2 = "741258";
         String m3 = "789654";
-        char mimi;
+        char mimi, rr;
         String id;
+      
+          
+        
+        System.out.println("End");
+    
         
      do{
         Scanner m = new Scanner(System.in);
@@ -18,15 +24,35 @@ abstract class Bill extends Shop {
         String mmm = m.nextLine();
         mimi = mmm.charAt(0);
     }while(!(mimi !='Y'||mimi !='y'));
-       if (mimi == 'Y'|| mimi == 'y'){
-    do{
+     
+            if (mimi == 'Y'|| mimi == 'y'){
+        do{
     
-    Scanner idee = new Scanner(System.in);
-     System.out.print("Enter ID : ");
-        id = idee.nextLine();
-    }while(!(id.equals(m1)||id.equals(m2)||id.equals(m3)));
-         discount = 0.1 ;
-       }else{ discount = 0.0;}
+                Scanner idee = new Scanner(System.in);
+                System.out.print("Enter ID : ");
+                    id = idee.nextLine();
+        }while(!(id.equals(m1)||id.equals(m2)||id.equals(m3)));
+                discount = 0.1 ;
+                
+            }else{ discount = 0.0;}
+      
+            // do{
+            //Scanner uu = new Scanner(System.in);
+            //System.out.println("-------------------------------------- ");
+            //System.out.print("คุณต้องการสมัครสมาชิกหรือไม่ (Y /N ): ");
+            //String kk = uu.nextLine();
+             //   rr = kk.charAt(0);
+           // }while(!( rr!='Y'||rr !='y'));
+             
+              //  if (rr=='Y'||rr =='y'){
+                 //   ArrayList myAr = new ArrayList();
+                    
+                    
+                 //   myAr.add("เพิ่มรหัสลูกค้ารายใหม่ : ");
+                 
+             
+                 
+        
 }
  
     
@@ -80,10 +106,21 @@ abstract class Bill extends Shop {
       System.out.print("รับเงิน>>>>  : ");
       ca = cash.nextDouble();
       System.out.println("ทอนเงิน>>>> "+(Total = ca-Total));
+      System.out.println("\n\n");
+      System.out.println("------------------------------------");
       System.out.println("\n         ขอบคุณที่ใช้บริการค่ะ         ");
-      System.out.println("----------------------------------");
+      System.out.println("              LOGO SHOP               ");
+      System.out.println("82/100 ถ.วิชิตสงคราม ต.กะทู้ อ.กะทู้ จ.ภูเก็ต 83120");
+      System.out.println("\n----------------------------------");
+     
 }
-}                 
+      
+      
+        
+   
+}
+
+                 
         
  
 
