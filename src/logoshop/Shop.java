@@ -18,9 +18,7 @@ abstract class Shop {
             public void Shopper(){
             System.out.println("LOGO SHOP");
             System.out.println(" goods = "+goods);
-} 
-
-            
+}       
 }
     
 

@@ -6,14 +6,9 @@ import java.util.Scanner;
      public void Shirt(String Type){
              this.Type = Type;
      }
-
-    Shirt() {
-        
+    Shirt() { 
     }
-
     public void Typeshirt1(){
-      
-        
         do{
             System.out.println("\n-------Shirt Menu--------");
             System.out.println("กด 1 > เสื้อยืด :"+" 250 THB");
@@ -26,10 +21,8 @@ import java.util.Scanner;
             super.B = A1.nextInt();
             
         }while(B!= 1 && B!= 2 && B!= 3 && B!= 4 && B!= 5);
-        this.Color1();
-                
+            this.Color1();       
     }
-
        public void Color1(){
             Scanner C = new Scanner(System.in);
             System.out.print("สี: ");   
@@ -40,41 +33,28 @@ import java.util.Scanner;
             Scanner D = new Scanner(System.in);
             System.out.print("ไซต์: ");  
             String D1 = D.nextLine();
-        }
-        
-   
-    //int Total_Shirt = 0; int count = 10;            
+        }       
         public void count(){
-            
             Scanner cc = new Scanner(System.in);
             System.out.print("จำนวนที่คุณต้องการ : ");
             many = cc.nextDouble();
-           
-            //  for(int i =1; i<=many ;i++){
-             
-   
-        switch (B){
-            case 1:
-                 sum(250.0,many);System.out.println("T-Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+    switch (B){
+        case 1:
+            sum(250.0,many);System.out.println("T-Shirt : "+Total_Shirt+" THB "  + many + " Piece");
                 break;
-                
-            case 2:
-                sum(350.0,many);System.out.println("Polo Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+        case 2:
+            sum(350.0,many);System.out.println("Polo Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+                break; 
+        case 3:
+            sum(450.0,many);System.out.println("Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+                break; 
+        case 4:
+            sum(550.0,many);System.out.println("Jacket : "+Total_Shirt+" THB "  + many + " Piece");
                 break;
-                
-            case 3:
-                sum(450.0,many);System.out.println("Shirt : "+Total_Shirt+" THB "  + many + " Piece");
+        default:
+            sum(750.0,many);System.out.println("Dress : "+Total_Shirt+" THB "  + many+ " Piece");
                 break;
-                
-            case 4:
-                sum(550.0,many);System.out.println("Jacket : "+Total_Shirt+" THB "  + many + " Piece");
-                break;
-                
-            default:
-                    sum(750.0,many);System.out.println("Dress : "+Total_Shirt+" THB "  + many+ " Piece");
-                break;
-        }
-
+                }
         }
         public void sum(Double a,Double b){
             Shop.Total_Shirt = (a*b);

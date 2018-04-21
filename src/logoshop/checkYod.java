@@ -2,25 +2,15 @@ package logoshop;
   class checkYod extends Shop {
      private double comission =0.0 ;
     
-     public void  setcalculatecheck(double Total){//เอาตัวเลขที่ขายได้มาเก็บไว้เป้นอาเรย์ลิสต์//
-      
-     
-       // comission = Shop.Total-(Shop.Total*0.5);
-     }
+     public void  setcalculatecheck(Double Total){}
 
     public void calculatecheck() {
         for(int n = 1 ; n< 3 ; n++){
             System.out.println();}
-        comission = Shop.Total-(Shop.Total*0.5);
+        comission = (Shop.Total*0.05);
         System.out.println("Sale price "+Shop.Total);
         System.out.println("Commission  : 5% ");
-        System.out.println("Commission : "+comission);
-        
-        
+        System.out.println("ค่า Commission ที่ได้รับ : "+comission);   
     }
-
-   
- 
-
  }
 
