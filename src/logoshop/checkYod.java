@@ -9,6 +9,8 @@ package logoshop;
      }
 
     public void calculatecheck() {
+        for(int n = 1 ; n< 3 ; n++){
+            System.out.println();}
         comission = Shop.Total-(Shop.Total*0.5);
         System.out.println("Sale price "+Shop.Total);
         System.out.println("Commission  : 5% ");

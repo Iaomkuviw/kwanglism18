@@ -12,7 +12,7 @@ class Plant extends Shop implements Color,Size,TypePlant {
     }
     //int P ;
     public void TypePlant1(){
-                 
+            
         do{
             System.out.println("\n-------Plant Menu--------");
             System.out.println("กด 1 > กางเกงยีนส์ :"+" 1500 THB");
@@ -22,7 +22,8 @@ class Plant extends Shop implements Color,Size,TypePlant {
             Scanner G = new Scanner(System.in);
             System.out.print("Enter Number>>> ");
              P = G.nextInt();
-        }while(P!= 1 && P!= 2 && P!= 3 && P!= 4);      
+        }while(P!= 1 && P!= 2 && P!= 3 && P!= 4); 
+                //(P!= 1 || P!= 2 || P!= 3 || P!= 4);      
          this.Color1();
     }
     

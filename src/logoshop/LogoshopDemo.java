@@ -22,15 +22,13 @@ public class LogoshopDemo {
         System.out.print("Password : ");
         in1 = input.nextLine();        
         }while(!((in.equals(a)&&in1.equals(b))));
-      
+     
        int AB;
-    do{
-        
-        
+       do{
         do{
             System.out.println("-----------------------------");
             Scanner AC = new Scanner(System.in);
-            System.out.println("กด 1 เพื่อขายของ / กด 2 เพื่อเช็คยอด  : ");
+            System.out.print("กด 1 เพื่อขายของ / กด 2 เพื่อเช็คยอด  : ");
             AB = AC.nextInt();         
         }while(AB!= 1 && AB!= 2);
         
@@ -68,6 +66,11 @@ public class LogoshopDemo {
     
          
     }while(order=='Y'); 
+       int i=1;
+       while ( i==3  ) {
+            System.out.print ("ขอบคุณค่ะ ");
+            ++i;
+        }   
     //}while(AB!= 1 && AB!= 2);
     }}
 
